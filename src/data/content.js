@@ -9,26 +9,26 @@ export const content = {
     "ai engineer",
     "><",
   ],
-  summary: "4th-year IT student from RUPP focused on building clean, functional web and mobile apps.\nI enjoy working through Flutter, MERN, and Laravel, learning by shipping real projects rather than demos.",
+  summary: "4th-year IT student from RUPP focused on building clean, functional web and mobile apps.\nI enjoy working through Flutter, React, MongoDB, Express.js, Node.js, and Laravel, learning by shipping real projects rather than demos.",
   projects: [
     {
       title: "SUJI ATALIER",
       description: "My personal website for my music project, suji °.",
-      tech: "Mern",
+      tech: "React, MongoDB, Express.js, Node.js",
       demo: "https://sujilament.netlify.app",
       repo: "https://github.com/faintedsnow/SUJI-ATALIER"
     },
     {
       title: "Client Portfolio",
       description: "A portfolio site made to display client works.",
-      tech: "Mern",
+      tech: "React, MongoDB, Express.js, Node.js",
       demo: "https://isthis.cash",
       repo: "https://github.com/faintedsnow/CashSite.git"
     },
     {
       title: "RUPPTECH",
       description: "Mobile E-Commerce App. A full-stack web app for browsing and buying mobile phones.",
-      tech: "Mern Stack",
+      tech: "React, MongoDB, Express.js, Node.js",
       repo: "https://github.com/faintedsnow/RuppTech",
       images: [
         "/assets/Rupptech/S1.png",
