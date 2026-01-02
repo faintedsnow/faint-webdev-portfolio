@@ -1,0 +1,287 @@
+@import url('https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,400,300&display=swap');
+
+:root {
+  --bg-canvas: #f3f6f9;
+  --bg-paper: #ffffff;
+  --text-color: #24292f;
+  --text-dim: #57606a;
+  --link-color: #0969da;
+  --border-color: #d0d7de;
+  
+  --font-main: 'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  
+  --max-width: 640px;    
+  --gap-section: 2.25rem;   /* DENSE: Reduced from 4rem for document rhythm */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-canvas);
+  color: var(--text-color);
+  line-height: 1.5; /* Slightly tighter line height for density */
+  -webkit-font-smoothing: antialiased;
+  font-size: 14px; /* classic readable dense technical size */
+  
+  /* Resetting background to simple color */
+  background-image: none;
+  min-height: 100vh;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2.5rem 1rem; /* Reduced top padding */
+  background: none;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  background-color: var(--bg-paper);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 2.5rem 2rem; /* Tighter internal padding */
+  box-shadow: 0 4px 12px rgba(27, 31, 35, 0.04);
+  
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-section);
+  /* Remove glass effects */
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
+
+/* Typography Helpers - Standard Weights */
+h1, h2, h3 {
+  font-weight: 600;
+  color: var(--text-color);
+  line-height: 1.25;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul.plain-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.plain-list li {
+  margin-bottom: 0.35rem; /* Tighter list items */
+  color: var(--text-color);
+  position: relative;
+}
+
+/* Profile Header */
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* Tighter header stack */
+  padding-bottom: 1.5rem; /* Reduced separator gap */
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.name {
+  font-size: 1.5rem; /* Slightly more compact name */
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  background: none;
+  -webkit-text-fill-color: initial;
+  color: var(--text-color);
+}
+
+.descriptor {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  line-height: 1.4;
+  margin-top: 0.35rem;
+}
+
+/* Status Dot Component Styles */
+.status-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+  text-align: right;
+  min-width: max-content;
+  opacity: 1;
+}
+
+.status-indicator {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #2da44e; /* GitHub Green */
+  border-radius: 50%;
+  z-index: 2;
+  box-shadow: none;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #2da44e;
+  border-radius: 50%;
+  animation: pulse 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+  z-index: 1;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+.status-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.status-label {
+  color: var(--text-dim);
+}
+
+.status-location {
+  color: var(--text-color);
+}
+
+
+/* Sections */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem; /* Very tight gap between title and content */
+}
+
+.section-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+  font-weight: 600;
+  margin-bottom: 0; /* Titles hug their content */
+  opacity: 1;
+}
+
+.section-content {
+  font-size: 0.95rem;
+}
+
+/* Projects */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Tighter project separation */
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem; /* Very tight internal item gap */
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+.project-item:hover {
+  background-color: transparent;
+}
+
+.project-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--link-color);
+  border-bottom: none;
+}
+
+.project-desc {
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+.project-tech {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  background-color: #f6f8fa;
+  padding: 0.1em 0.5em;
+  border-radius: 12px;
+  border: 1px solid #d0d7de;
+  display: inline-block;
+  margin-top: 0.4rem;
+  opacity: 1;
+}
+
+.project-item:hover .project-tech {
+  border-color: #d0d7de;
+}
+
+.project-tech-wrapper {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.note-link {
+  font-weight: 500;
+  color: var(--link-color);
+}
+
+.footer {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+::selection {
+  background: #ccedff;
+  color: var(--text-color);
+}
