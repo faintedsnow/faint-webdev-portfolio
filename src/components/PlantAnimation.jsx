@@ -214,6 +214,14 @@ export const PlantAnimation = () => {
         p.text(" |  o  | ", picX, picY + 12);
         p.text(" +-----+ ", picX, picY + 24);
 
+        // Draw Study Board
+        const boardX = p.width * 0.28;
+        const boardY = p.height - 145;
+        p.text("  _________________________  ", boardX, boardY);
+        p.text(" |                         | ", boardX, boardY + 12);
+        p.text(" | MERN · Laravel · Flutter | ", boardX, boardY + 24);
+        p.text(" |_________________________| ", boardX, boardY + 36);
+
         // Draw mouse hole
         const holeX = p.width * 0.42;
         const holeY = p.height - 50;
