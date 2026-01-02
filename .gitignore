@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+build_error.log
 
 node_modules
 dist
@@ -37,3 +38,11 @@ dist-ssr
 build
 .next
 out
+
+# Testing
+/coverage
+.nyc_output
+
+# Temp files
+*.tmp
+*.bak
