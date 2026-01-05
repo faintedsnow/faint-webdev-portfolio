@@ -10,7 +10,7 @@ export const content = {
     "Learning Flutter and Laravel",
     "learning ai engineer",
   ],
-  summary: "4th-year IT student from RUPP focused on building clean, functional web and mobile apps.\nI enjoy working through Flutter, React, MongoDB, Express.js, Node.js, FastApi and Laravel.",
+  summary: "4th-year ITE student from RUPP focused on building clean, functional web and mobile apps.\nI enjoy working through Flutter, React, MongoDB, Express.js, Node.js, FastApi and Laravel.",
   projects: [
     {
       title: "SUJI ATALIER",
