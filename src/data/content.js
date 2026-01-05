@@ -1,3 +1,5 @@
+import { notes } from './notes';
+
 export const content = {
   profile: {
     name: "Vichet Sopheaktra",
@@ -6,10 +8,9 @@ export const content = {
   },
   currently: [
     "Learning Flutter and Laravel",
-    "ai engineer",
-    "><",
+    "learning ai engineer",
   ],
-  summary: "4th-year IT student from RUPP focused on building clean, functional web and mobile apps.\nI enjoy working through Flutter, React, MongoDB, Express.js, Node.js, and Laravel, learning by shipping real projects rather than demos.",
+  summary: "4th-year IT student from RUPP focused on building clean, functional web and mobile apps.\nI enjoy working through Flutter, React, MongoDB, Express.js, Node.js, FastApi and Laravel.",
   projects: [
     {
       title: "SUJI ATALIER",
@@ -38,6 +39,22 @@ export const content = {
         "/assets/Rupptech/S5.png"
       ]
     },
+        {
+      title: "MiraMira",
+      description: "made to use picture mode on anything",
+      tech: "javascript, html, css",
+      demo: "https://miramiramira.netlify.app",
+      repo: "https://github.com/faintedsnow/picture-in-picture.git"
+    },
+            {
+      title: "Resume_screening",
+      description: "made to screen resume",
+      tech: "react.js, FastAPI, Python",
+      repo: "https://github.com/faintedsnow/ResumeScreening.git",
+      images: [
+        "/assets/ResumeScreening/s1.png"
+      ]
+    },
     {
       title: "PHSAR",
       description: "A full-stack mobile e-commerce application featuring product browsing, persistent cart, checkout, authentication, and an admin panel.",
@@ -56,23 +73,7 @@ export const content = {
       ]
     },
   ],
-  notes: [
-    {
-      title: "note",
-      date: "2025",
-      link: "#"
-    },
-    {
-      title: "note",
-      date: "2024",
-      link: "#"
-    },
-    {
-      title: "note",
-      date: "2024",
-      link: "#"
-    }
-  ],
+  notes,
   volunteer: "Contributing code to local non-profit initiatives. Helping peers debug legacy codebases.",
   education: "( ... )", 
   contact: [

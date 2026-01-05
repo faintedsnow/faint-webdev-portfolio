@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import p5 from 'p5';
 
-export const PlantAnimation = () => {
+export const CatAnimation = () => {
   const canvasRef = useRef(null);
   const p5Instance = useRef(null);
 
@@ -169,61 +169,22 @@ export const PlantAnimation = () => {
         p.textFont('monospace');
         p.textSize(10);
 
-        // Draw Door in background
-        const doorX = p.width * 0.7;
+        // Background elements (Simplified for mobile)
+        const doorX = p.width * (p.width < 400 ? 0.6 : 0.75);
         const doorY = p.height - 110;
         p.text(" _________ ", doorX, doorY);
         p.text("|         |", doorX, doorY + 12);
-        p.text("|         |", doorX, doorY + 24);
         p.text("|      O  |", doorX, doorY + 36);
-        p.text("|         |", doorX, doorY + 48);
-        p.text("|         |", doorX, doorY + 60);
-        p.text("|         |", doorX, doorY + 72);
         p.text("|_________|", doorX, doorY + 84);
-
-        // Draw a small window
-        const winX = p.width * 0.2;
-        const winY = p.height - 120;
-        p.text("  +-------+", winX, winY);
-        p.text("  |   |   |", winX, winY + 12);
-        p.text("  +---+---+", winX, winY + 24);
-        p.text("  |   |   |", winX, winY + 36);
-        p.text("  +-------+", winX, winY + 48);
 
         // Draw Potted Plant 1 (Small)
         const p1X = p.width * 0.08;
         const p1Y = p.height - 75;
         p.text("  _w_  ", p1X, p1Y);
-        p.text(" (   ) ", p1X, p1Y + 12);
-        p.text("  | |  ", p1X, p1Y + 24);
         p.text(" [___] ", p1X, p1Y + 36);
 
-        // Draw Potted Plant 2 (Tall)
-        const p2X = p.width * 0.88;
-        const p2Y = p.height - 90;
-        p.text("  _(_)_  ", p2X, p2Y);
-        p.text(" (_(_|_) ", p2X, p2Y + 12);
-        p.text("   | |   ", p2X, p2Y + 24);
-        p.text("   | |   ", p2X, p2Y + 36);
-        p.text("  [___]  ", p2X, p2Y + 48);
-
-        // Draw Picture frame
-        const picX = p.width * 0.52;
-        const picY = p.height - 130;
-        p.text(" +-----+ ", picX, picY);
-        p.text(" |  o  | ", picX, picY + 12);
-        p.text(" +-----+ ", picX, picY + 24);
-
-        // Draw Study Board
-        const boardX = p.width * 0.28;
-        const boardY = p.height - 145;
-        p.text("  _________________________  ", boardX, boardY);
-        p.text(" |                         | ", boardX, boardY + 12);
-        p.text(" | MERN · Laravel · Flutter | ", boardX, boardY + 24);
-        p.text(" |_________________________| ", boardX, boardY + 36);
-
         // Draw mouse hole
-        const holeX = p.width * 0.42;
+        const holeX = p.width * 0.45;
         const holeY = p.height - 50;
         p.text("  _---_  ", holeX, holeY + 15);
         p.text(" (     ) ", holeX, holeY + 27);

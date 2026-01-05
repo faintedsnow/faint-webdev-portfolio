@@ -70,6 +70,7 @@ export function Map({ children, styles, ...props }) {
       container: containerRef.current,
       style: mapStyle,
       renderWorldCopies: false,
+      pitch: 45, // Add 3D perspective
       attributionControl: {
         compact: true,
       },
@@ -77,7 +78,16 @@ export function Map({ children, styles, ...props }) {
     });
 
     const styleDataHandler = () => setIsStyleLoaded(true);
-    const loadHandler = () => setIsLoaded(true);
+    const loadHandler = () => {
+      setIsLoaded(true);
+      // Smooth fly-to animation on load
+      mapInstance.flyTo({
+        center: [props.initialViewState?.longitude ?? 104.9282, props.initialViewState?.latitude ?? 11.5564],
+        zoom: 15,
+        duration: 2000,
+        essential: true
+      });
+    };
 
     mapInstance.on("load", loadHandler);
     mapInstance.on("styledata", styleDataHandler);
